@@ -1,0 +1,27 @@
+{% extends "apple/base.html" %}
+{% block body_block %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 style="text-align: center;">Welcome!</h1>
+        {% if user.is_authenticated %}
+        <h2>Logged in as {{ user.username }}</h2>
+        <h3 style="text-align: center;">Abstract</h3>
+        <p>The emergence of online marketplaces has contributed to the increase in the 
+            number of consumers for a product. It also provides an avenue for consumers
+             to give instant feedback from the purchased product. In as much as good
+              feedback helps to attract more sales, a bad consumer experience can affect sales 
+              as well. In other words, analysis of consumer sentiment with quickly appropriate 
+              response helps to save the business of the day. In this report, a study on sentiment 
+              analysis is conducted to assess the opinion of consumers regarding electronic
+               gadgets that are considered niche products for online marketplaces. 
+               By exploring machine learning algorithms, the algorithm that gives more accurate result
+                is chosen. The trained model is then used to analyze real-time reviews and comments about 
+                these products. The system works by accepting input text from the user, performs sentiment
+                 analysis operations, and give results. The system is based on a sentiment analysis algorithm
+                  to quantify positive and negative feelings concerning iPhone and android devices.  </p>
+        {% else %}
+        <h2>Register or Login if you'd like to</h2>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

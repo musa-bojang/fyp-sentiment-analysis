@@ -1,0 +1,26 @@
+{% extends 'apple/base.html' %}
+{% block body_block %}
+<div class="container" style="width: 50%;">
+    <div class="jumbotron">
+        <h2>Login here :</h2>
+        <form method="post" action="{% url 'apple:user_login' %}">
+            {% csrf_token %}
+            {# A more "HTML" way of creating the login form#}
+            <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password">
+            </div>
+            <input type="submit" name="" class="btn btn-primary" value="Login">
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
